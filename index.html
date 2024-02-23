@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!------- Font Awesome Link ------->
+    <script src="https://kit.fontawesome.com/d622e705a9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-------------- Bootstrap Link----------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body >
+    <div id="navbar-section">
+        
+        <h2>Hari Rajan</h2>
+        <div class="nav-list-section">
+            <ul class="nav-ul">
+                <li class="nav-li"><a href="#">Home</a></li>
+                <li class="nav-li"><a href="#">About</a></li>
+                <li class="nav-li"><a href="#">Educations</a></li>
+                <li class="nav-li"><a href="#">Skills</a></li>
+                <li class="nav-li"><a href="#">Projects</a></li>
+                <li class="nav-li"><a href="#">Resume</a></li>
+                <li class="nav-li"><a href="#">Contact</a></li>
+                <!--<li class="nav-li rn-btn"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>-->
+                <li class="nav-li li-whatsup"><a href="#" style="padding: 0;"><i class="fa-brands fa-square-whatsapp"></i></a></li>
+                
+            </ul>
+        </div>
+        <i class="fa-solid fa-bars menubar-icon"></i>
+    </div>
+
+    <div id="my-intro-section">
+        <div class="intro-content">
+            <div class="intro-title">
+                <h3>Welcome to my world</h3>
+                
+                <h1>Hi, I'm <span style="color:#ff014f;">Hari Rajan</span></h1>
+                <h1>Web Developer</h1>
+                <p>"Hi! I'm Hari Rajan, a web developer passionate about creating websites that are both attractive and
+                    user-friendly. Let's build something awesome together!"
+                </p>
+                <div class="intro-dowload-cv-and-contact-info">
+                    <button type="button" class="btn btn-danger">Download Cv</button>
+                    <button type="button" class="btn btn-success">Contact Me</button>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div class="profile-pic">
+            <img src="prof.png" alt="" srcset="">
+        </div>
+    </div>
+
+
+
+  <script>
+    window.addEventListener('scroll',()=>{
+        let navbarsection=document.querySelector('#navbar-section');
+        if (window.scrollY>0){
+            navbarsection.classList.add('scrolled')
+        }else{
+            navbarsection.classList.remove('scrolled')
+        }
+
+    })
+  </script>
+
+</body>
+
+</html>
