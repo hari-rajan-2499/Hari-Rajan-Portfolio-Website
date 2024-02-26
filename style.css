@@ -36,7 +36,7 @@ body::before {
     justify-content: space-between;
     align-items: center;
     padding: 0 60px;
-    height: 95px;
+    height: 115px;
     position: fixed;
     top: 0;
     left: 0;
@@ -140,20 +140,26 @@ body::before {
 .intro-content {
     display: flex;
     flex-direction: column;
-    row-gap: 10px;
-    justify-content: center;
-    align-items: center;
+
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 
-.intro-content .intro-title h3 {
+.intro-title{
+    margin-top: 7rem;
+}
+
+
+
+.intro-content .intro-title h3,
+.intro-social-media-account-section .intro-h3-style {
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 3px;
     font-family: "Montserrat", sans-serif;
     color: #3c3e41;
     text-transform: uppercase;
-    margin-bottom: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 
@@ -165,6 +171,7 @@ body::before {
     font-weight: 700;
     font-size: clamp(1.5rem, 4vw, 3rem);
     line-height: 75px;
+    margin: 0;
 
 }
 
@@ -173,7 +180,7 @@ body::before {
     line-height: 30px;
     opacity: 0.9;
     color: #3c3e41;
-    margin-top: 25px;
+    margin-top: 18px;
     text-align: justify;
 }
 
@@ -203,11 +210,12 @@ body::before {
     position: absolute;
     width: 60%;
     height: 70%;
-    top: 50%;
+    top: 45%;
     box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
     left: 50%;
     transform: translate(-50%, -50%);
     background: linear-gradient(145deg, #e2e8ec, #ffffff);
+    
 
 }
 
@@ -216,7 +224,46 @@ body::before {
     width: 50%;
     height: auto;
     z-index: 10;
+    margin-bottom: 4.5rem;
 }
+
+
+.intro-social-media-account-section{
+    margin-top: 5rem;
+    
+}
+
+
+.intro-social-media-account-section ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.intro-social-media-account-section ul li {
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    background-color: green;
+    line-height: 60px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 6px;
+    transition: 0.4s;
+    box-shadow: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+    color: #3c3e41;
+}
+
+.intro-social-media-account-section ul li i{
+    color: #3c3e41;
+
+}
+
+
 
 
 /************ Media Query ********/
@@ -259,6 +306,17 @@ body::before {
         order: 2;
     }
 
+    .intro-title{
+        margin-top: 2rem;
+    }
+
+    .intro-social-media-account-section{
+        margin-top: 4rem;
+        
+    }
+
+    
+
     .profile-pic {
         order: 1;
         margin-top: 2rem;
@@ -267,23 +325,25 @@ body::before {
     .profile-pic img {
         height: auto;
         width: 40%;
-        padding: 20px;
+        padding: 30px;
         background: linear-gradient(145deg, #e2e8ec, #ffffff);
+        margin-bottom: 0;
     }
 
     .profile-pic::after {
         width: 80%;
         height: 100%;
+        top: 50%;
     }
 }
 
 
 @media screen and (max-width:550px) {
     #my-intro-section {
-        
+
         grid-template-columns: 1fr;
-        padding: 0 2rem;
-        row-gap: 5rem;
+        padding: 0 1rem;
+        row-gap: 2rem;
         height: auto;
     }
 
@@ -296,10 +356,19 @@ body::before {
         order: 2;
     }
 
+    .intro-title{
+        margin-top: 1.5rem;
+    }
+
+    .intro-social-media-account-section{
+        margin-top: 2.5rem;
+        
+    }
+
     .profile-pic {
         padding: 0;
         order: 1;
-        
+
 
     }
 
@@ -308,6 +377,11 @@ body::before {
         height: auto;
         width: 100%;
     }
+    .profile-pic img {
+        padding: 60px;
+    }
+
+    
 
     .profile-pic::after {
         width: 100%;
